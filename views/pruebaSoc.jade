@@ -1,0 +1,86 @@
+
+block content
+  h1 API SMART TAXI
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/jquery-3.1.1.min.js")  
+  script(src="/javascripts/test.js")
+  link(rel="stylesheet", href="/stylesheets/style.css")
+div(id="selectUser-wrapper")
+    button(id="userUI")
+        |User UI
+    button(id="driverUI")
+        |Driver UI        
+div(class="inner")
+div(id="user-wrapper")
+    div(id="form-user-wrapper")
+        h2 Usuario
+        form( name="logger-user" id="logger-user-form")
+
+            br
+            a(  href="/auth/facebook/user") log            
+                     
+div(id="user-perfil")
+div(id="taxis-cercanos")
+div(id="respuesta-solicitud")  
+div(id="notificacion-solicitud-user") 
+div(id="driver-wrapper")
+    div(id="form-driver-wrapper")
+        h2 Conductor
+        form(name="logger-driver" id="logger-driver-form")
+            input(type="text" id="txtdriver" placeholder="Driver" name="txtdriver")
+            br
+            input(type="password" id="txtpassworddriver" placeholder="password" name="txtpassworddriver")
+            br
+            input(type="button" id="enviarlogdriver" value="Enviar" name="enviardriver")            
+
+
+
+        form(name="register-driver" id="register-driver-form")
+            |Nombre conductor
+            input(type="text" id="txtdrivernombre" placeholder="Driver" name="txtdriver")
+            br
+            |Usuario
+            input(type="text" id="txtdriverusuario" placeholder="Driver" name="txtdriver")
+            br
+            |Pass
+            input(type="password" id="txtdriverpassword" placeholder="Driver" name="txtdriver")
+            br
+            |Cedula
+            input(type="text" id="txtdrivercedula" placeholder="Driver" name="txtdriver")
+            br
+            |Placa Vehículo
+            input(type="text" id="txtdriverplaca" placeholder="Driver" name="txtdriver")
+            br
+            |Modelo Vehículo
+            input(type="text" id="txtdrivermodelo" placeholder="Driver" name="txtdriver")
+            br            
+            |(La posición tiene que ser enviada cada cinco minutos con un update, por cuestión 
+            br
+            |de prueba se coloca manualmente)
+            br
+            |Posición X
+            input(type="number" id="txtdriverposicionx" placeholder="Driver" name="txtdriver" step="0.5" min="1" max="100")
+            br
+            |Posición Y
+            input(type="number" id="txtdriverposiciony" placeholder="Driver" name="txtdriver" step="0.5" min="1" max="100")
+            br-
+            |(La disponibilidad es actualizada por el conductor, por cuestión 
+            br
+            |de prueba se coloca aleatoriamente)
+            br
+            |Disponibilidad (No necesario)
+            input(type="text" id="txtdriverdisponibilidad" placeholder="Driver" name="txtdriver")
+            br
+            |(La foto se colocará por defecto, por cuestión de prueba)
+            br
+            |Foto(No necesario)
+            input(type="text" id="txtdriverphoto" placeholder="Driver" name="txtdriver")
+            br       
+            input(type="button" id="saveDriver" value="Guardar")
+div(id="driver-perfil")                       
+div(id="notificacion-solicitud-driver")
+div(id="aceptarSol")
+
+
+        
+
